@@ -49,13 +49,13 @@ export function TasksList({
               >
                 <View
                   testID={`marker-${index}`}
-                  style={item.done ? styles.taskMarker : styles.taskMarkerDone}
+                  style={item.done ? styles.taskMarkerDone : styles.taskMarker}
                 >
                   {item.done && <Icon name="check" size={12} color="#FFF" />}
                 </View>
 
                 <Text
-                style={item.done ? styles.taskText : styles.taskTextDone}
+                style={item.done ? styles.taskTextDone : styles.taskText}
                 >
                   {item.title}
                 </Text>
@@ -66,7 +66,6 @@ export function TasksList({
               testID={`trash-${index}`}
               style={{ paddingHorizontal: 24 }}
               onPress={() => removeTask(item.id)}
-              //TODO - use onPress (remove task) prop
             >
               <Image source={trashIcon} />
             </TouchableOpacity>
